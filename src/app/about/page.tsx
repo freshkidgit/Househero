@@ -86,7 +86,7 @@ export default function AboutPage() {
                         Underwritten by Travelers Insurance. Covers property damage, equipment operation, and accidental liability on every job site with zero customer deductible.
                       </p>
                       <span className="text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 inline-block mt-1">
-                        ✓ Certificate #NSP-GL-849204 Active
+                        ✓ Verified Policy Active • COI Issued for HOAs on Request
                       </span>
                     </div>
                   )}
@@ -130,8 +130,8 @@ export default function AboutPage() {
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-[2rem] overflow-hidden shadow-2xl shadow-amber-500/10 border border-white/80 aspect-4/3 sm:aspect-5/4">
                 <img
-                  src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=85"
-                  alt="Certified House Hero property care team"
+                  src="/images/house-cleaning.jpg"
+                  alt="Certified HouseHero property care team"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-900/40 via-transparent to-transparent pointer-events-none" />

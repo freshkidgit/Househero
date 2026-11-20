@@ -12,9 +12,11 @@ const SERVICES = [
 
 const QUICK_LINKS = [
   { label: 'Book Multi-Service', href: '/book' },
-  { label: 'About', href: '/about' },
+  { label: 'Customer Portal', href: '/portal' },
+  { label: 'About Us', href: '/about' },
   { label: 'FAQ', href: '/faq' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Contact & Quotes', href: '/contact' },
+  { label: 'Dispatch Admin', href: '/admin' },
   { label: 'Privacy Policy', href: '/privacy-policy' },
   { label: 'Terms of Service', href: '/terms-of-service' },
 ];
@@ -46,11 +48,11 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:18005556782"
+                  href="tel:+2349134204578"
                   className="flex items-center gap-2.5 text-sm text-stone-700 hover:text-amber-600 transition-colors font-medium"
                 >
                   <Phone className="w-4 h-4 text-stone-500 shrink-0" />
-                  (800) 555-6782
+                  +234 913 420 4578
                 </a>
               </li>
               <li>

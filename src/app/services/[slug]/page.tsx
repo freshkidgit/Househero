@@ -85,11 +85,11 @@ export default async function ServiceDetailPage({
                   </Link>
 
                   <a
-                    href="tel:18005556782"
+                    href="tel:+2349134204578"
                     className="py-3 px-4 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-800 font-bold text-xs transition-colors flex items-center justify-center gap-1.5"
                   >
                     <Phone className="w-3.5 h-3.5 text-amber-600" />
-                    <span>Call Dispatch</span>
+                    <span>Call +234 913 420 4578</span>
                   </a>
                 </div>
               </div>

@@ -26,7 +26,7 @@ const FAQS: FAQItem[] = [
   {
     category: 'billing',
     question: 'When is payment collected?',
-    answer: 'We believe in earning your trust. For standard residential jobs, you can choose "Pay Upon Completion," meaning $0 is charged today. You inspect the work first and then settle via cash, check, debit, or digital invoice. For credit card holds, funds are authorized securely and only finalized after your satisfaction sign-off.'
+    answer: 'We believe in earning your trust. All standard residential jobs operate on a Pay Upon Completion policy, meaning $0 is charged today. You inspect the work first and then settle via cash, check, debit, or digital invoice. We never harvest or store raw credit card numbers on-site.'
   },
   {
     category: 'billing',

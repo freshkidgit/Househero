@@ -3,6 +3,8 @@ import './globals.css';
 import { AppProvider } from '@/context/AppContext';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ScrollProgressBar from '@/components/ScrollProgressBar';
+import PersistentMobileCTA from '@/components/PersistentMobileCTA';
 
 export const metadata: Metadata = {
   title: 'House Hero | Professional Property Care',
@@ -21,10 +23,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="orb-a absolute -bottom-32 left-1/3 w-72 h-72 rounded-full bg-amber-100/50 blur-3xl" />
         </div>
         <AppProvider>
+          <ScrollProgressBar />
           <div className="relative z-10 flex flex-col min-h-screen">
             <Navbar />
             <main className="flex-1">{children}</main>
             <Footer />
+            <PersistentMobileCTA />
           </div>
         </AppProvider>
       </body>

@@ -7,6 +7,8 @@ import { Home, Phone, Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
 
 const NAV_LINKS = [
   { label: 'Services', href: '/services' },
+  { label: 'Bundles', href: '/bundles' },
+  { label: 'Portal', href: '/portal' },
   { label: 'About', href: '/about' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Contact', href: '/contact' },
@@ -90,11 +92,11 @@ export default function Navbar() {
           {/* Desktop right actions */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="tel:18005556782"
+              href="tel:+2349134204578"
               className="flex items-center gap-2 text-sm font-semibold text-stone-700 hover:text-amber-600 transition-colors px-2 py-2 rounded-lg hover:bg-amber-50"
             >
               <Phone className="w-4 h-4" />
-              <span>(800) 555-6782</span>
+              <span>+234 913 420 4578</span>
             </a>
             <Link
               href="/contact"
@@ -187,11 +189,11 @@ export default function Navbar() {
         {/* Drawer footer actions */}
         <div className="border-t border-stone-100 px-4 py-5 space-y-3">
           <a
-            href="tel:18005556782"
+            href="tel:+2349134204578"
             className="flex items-center gap-2.5 w-full px-4 py-3 rounded-xl bg-stone-50 hover:bg-stone-100 transition-colors text-stone-700 text-sm font-semibold"
           >
             <Phone className="w-4 h-4 text-amber-500" />
-            (800) 555-6782
+            +234 913 420 4578
           </a>
           <Link
             href="/contact"

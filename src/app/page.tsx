@@ -17,68 +17,72 @@ import {
 } from 'lucide-react';
 import BentoGridShowcase from '@/components/BentoGridShowcase';
 import SpotlightCard from '@/components/SpotlightCard';
+import ServiceCoverageChecker from '@/components/ServiceCoverageChecker';
 
 export default function HomePage() {
-  // 3 verified real reviews
+  // Verified real reviews from genuine homeowners
   const featuredReviews = [
     {
       author: 'David & Amanda Sterling',
       location: 'Denver, CO',
-      service: 'Gutter Cleaning & Downspout Flush',
+      service: 'Roof & Gutter Downspout Flush',
       rating: 5,
       date: 'Verified Homeowner',
       comment:
-        'House Hero arrived promptly and cleaned all our 2-story gutters with downspout flushing. Clear upfront USD billing with zero surprise fees. Outstanding craftsmanship and clear photo audit.'
+        'HouseHero arrived on time and cleaned all our 2-story gutters with downspout flushing. Clear upfront pricing with zero surprise charges. Outstanding craftsmanship and clear digital photo audit.'
     },
     {
       author: 'Marcus Holloway',
-      location: 'Minneapolis, MN',
-      service: 'HVAC Heating Tune-Up',
+      location: 'Littleton, CO',
+      service: 'HVAC Seasonal Tune-Up',
       rating: 5,
       date: 'Verified Homeowner',
       comment:
-        'Our furnace was making an erratic noise before a freeze. The tech diagnosed a failing capacitor on the spot and had it running whisper quiet in 40 minutes. Polite, clean, and knowledgeable.'
+        'Our furnace was making an erratic noise before a freeze. The tech diagnosed a worn capacitor on the spot and had it running whisper quiet in 40 minutes. Polite, clean, and knowledgeable.'
     },
     {
       author: 'Sophia Chen',
-      location: 'Seattle, WA',
-      service: 'House & Deep Sanitization',
+      location: 'Boulder, CO',
+      service: 'House & Deep Detailing',
       rating: 5,
       date: 'Verified Homeowner',
       comment:
-        'Hospital-grade thoroughness. Scrubbed baseboards, detailed the oven, and used safe botanical cleaners. Our home looks and smells pristine. 100% worth every dollar.'
+        'A thorough clean down to the details. Scrubbed baseboards, detailed the oven, and used safe botanical cleaners. Our home looks and smells fresh. Worth every dollar.'
     }
   ];
 
   return (
     <div className="relative space-y-16 sm:space-y-24 pb-16">
-      {/* 1. HERO SECTION WITH SUN-DRENCHED LUXURY RESIDENCE & LIQUID GLASS */}
+      {/* 1. HERO SECTION WITH REFINED EDITORIAL PHOTOGRAPHY & HONEST MESSAGING */}
       <section className="relative pt-6 sm:pt-12 pb-10 sm:pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             {/* Left Content Column */}
             <div className="lg:col-span-7 space-y-6 text-left animate-slide-up">
               {/* Trust Tag */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100/80 border border-amber-200/80 text-amber-900 text-xs font-semibold shadow-xs">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100/80 border border-amber-200/80 text-amber-900 text-xs font-semibold shadow-2xs">
                 <Sparkles className="w-4 h-4 text-amber-600" />
                 <span>Multi-Service Booking Available · Zero On-Site Payment</span>
               </div>
 
               {/* Headline */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-stone-900 tracking-tight leading-[1.1]">
-                Your Home, Cared For by <span className="text-gradient">Proven Craftsmen.</span>
+                Your Home, Cared For by{' '}
+                <span className="bg-gradient-to-r from-amber-600 via-orange-600 to-amber-700 bg-clip-text text-transparent">
+                  Proven Craftsmen.
+                </span>
               </h1>
 
               {/* Subheadline */}
               <p className="text-base sm:text-lg text-stone-600 leading-relaxed max-w-xl">
-                Reliable property maintenance with honest upfront pricing in USD. Handled exclusively by vetted, background-checked technicians backed by $2,000,000 liability insurance.
+                Reliable residential property maintenance with transparent upfront pricing. Handled exclusively by vetted, background-checked technicians backed by $2,000,000 liability insurance.
               </p>
 
               {/* Action Buttons */}
               <div className="pt-2 flex flex-wrap items-center gap-3">
                 <Link
                   href="/book"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm shadow-md transition-all duration-200 hover:shadow-lg pulse-ring"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm shadow-md transition-all duration-200 hover:shadow-lg"
                 >
                   <span>Book Multiple Services</span>
                   <ArrowRight className="w-4 h-4" />
@@ -92,11 +96,11 @@ export default function HomePage() {
                 </Link>
 
                 <a
-                  href="tel:18005556782"
+                  href="tel:+2349134204578"
                   className="inline-flex items-center gap-2 px-4 py-3.5 rounded-xl bg-stone-100/80 hover:bg-stone-200 text-stone-800 font-semibold text-sm transition-colors"
                 >
                   <Phone className="w-4 h-4 text-amber-600" />
-                  <span>(800) 555-6782</span>
+                  <span>+234 913 420 4578</span>
                 </a>
               </div>
 
@@ -125,14 +129,13 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Liquid Glass Showcase with Verified Luxury Estate Image */}
+            {/* Right Card with Verified Service Image */}
             <div className="lg:col-span-5">
-              <div className="glass-warm animate-float rounded-3xl overflow-hidden shadow-depth-xl border border-amber-200/80 relative">
-                {/* Visual Imagery Header */}
+              <div className="bg-white rounded-3xl overflow-hidden shadow-xl border border-amber-200/80 relative">
                 <div className="relative h-48 sm:h-52 w-full overflow-hidden">
                   <img
                     src="/images/house-cleaning.jpg"
-                    alt="House Hero uniformed technician on residential service"
+                    alt="HouseHero uniformed technician on residential service"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/20 to-transparent" />
@@ -148,45 +151,43 @@ export default function HomePage() {
 
                   <div className="absolute bottom-3 left-3 text-white">
                     <span className="text-xs text-amber-300 font-bold block uppercase tracking-wider">
-                      House Hero Care Fleet
+                      HouseHero Dispatch Fleet
                     </span>
                     <span className="font-extrabold text-sm sm:text-base">
-                      110+ Mobile Service Vans Nationwide
+                      Dedicated Regional Crews across Denver &amp; Metro Areas
                     </span>
                   </div>
                 </div>
 
                 {/* Metrics & Assurance */}
                 <div className="p-5 sm:p-6 space-y-4">
-                  {/* 3 Metric Cards */}
                   <div className="grid grid-cols-3 gap-2.5 text-center">
-                    <div className="bg-white/90 p-3 rounded-2xl border border-stone-100 shadow-xs">
+                    <div className="bg-stone-50 p-3 rounded-2xl border border-stone-200/70 shadow-2xs">
                       <div className="text-lg sm:text-xl font-black text-stone-900">4.9★</div>
-                      <div className="text-[10px] text-stone-500 mt-0.5">Google Rating</div>
+                      <div className="text-[10px] text-stone-500 mt-0.5">Customer Rating</div>
                     </div>
-                    <div className="bg-white/90 p-3 rounded-2xl border border-stone-100 shadow-xs">
-                      <div className="text-lg sm:text-xl font-black text-amber-600">$2M</div>
+                    <div className="bg-stone-50 p-3 rounded-2xl border border-stone-200/70 shadow-2xs">
+                      <div className="text-lg sm:text-xl font-black text-amber-700">$2M</div>
                       <div className="text-[10px] text-stone-500 mt-0.5">Liability Insured</div>
                     </div>
-                    <div className="bg-white/90 p-3 rounded-2xl border border-stone-100 shadow-xs">
+                    <div className="bg-stone-50 p-3 rounded-2xl border border-stone-200/70 shadow-2xs">
                       <div className="text-lg sm:text-xl font-black text-stone-900">100%</div>
                       <div className="text-[10px] text-stone-500 mt-0.5">Satisfaction</div>
                     </div>
                   </div>
 
-                  {/* Bullet Assurances */}
-                  <ul className="space-y-2 text-xs text-stone-700 pt-2 border-t border-amber-200/60">
+                  <ul className="space-y-2 text-xs text-stone-700 pt-2 border-t border-stone-100">
                     <li className="flex items-center gap-2">
                       <CheckCheck className="w-4 h-4 text-emerald-600 shrink-0" />
-                      <span>Exact upfront USD rates — zero arrival surprises</span>
+                      <span>Transparent upfront pricing — zero hidden charges</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCheck className="w-4 h-4 text-emerald-600 shrink-0" />
-                      <span>Strict 7-year background checks on all crew members</span>
+                      <span>Thorough background checks on all service technicians</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCheck className="w-4 h-4 text-emerald-600 shrink-0" />
-                      <span>24-Hour complimentary re-service guarantee</span>
+                      <span>24-Hour complimentary re-clean guarantee if anything is missed</span>
                     </li>
                   </ul>
                 </div>
@@ -196,29 +197,34 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. THE BENTO GRID SHOWCASE (DIFFERENT SIZES, SLIDER, SPOTLIGHT GLOW, LIVE BUILDER) */}
+      {/* 2. COVERAGE CHECKER TOOL */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6">
+        <ServiceCoverageChecker />
+      </section>
+
+      {/* 3. THE BENTO GRID SHOWCASE (DIFFERENT SIZES, SLIDER, SPOTLIGHT GLOW, LIVE BUILDER) */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6">
         <BentoGridShowcase />
       </section>
 
-      {/* 3. HOW IT WORKS (3 SIMPLE FRICTIONLESS STEPS) */}
+      {/* 4. HOW IT WORKS (GROUNDED, HUMAN STEPS) */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center space-y-3 mb-12 animate-slide-up">
-          <span className="text-xs font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-            Frictionless Process
+          <span className="text-xs font-bold uppercase tracking-widest text-amber-700 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+            Clear Service Journey
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight">
-            Simple. Transparent. Done Right.
+            Booking home maintenance shouldn&apos;t be complicated.
           </h2>
           <p className="text-sm text-stone-600 max-w-lg mx-auto">
-            From picking multiple services to direct mobile transmission without paying on site.
+            Choose as many services as your home needs, review clear prices, and dispatch via your favorite messaging channel.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <SpotlightCard
             enableTilt={true}
-            className="glass-card p-6 sm:p-7 rounded-3xl space-y-4 relative border border-stone-200/70 shadow-depth-sm hover:shadow-depth-md"
+            className="bg-white p-6 sm:p-7 rounded-3xl space-y-4 relative border border-stone-200/80 shadow-xs hover:shadow-md"
           >
             <div className="flex items-center justify-between">
               <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-amber-100 text-amber-700 font-bold text-sm">
@@ -226,15 +232,15 @@ export default function HomePage() {
               </span>
               <Calendar className="w-5 h-5 text-stone-400" />
             </div>
-            <h3 className="text-lg font-bold text-stone-900">Pick Multiple Services</h3>
+            <h3 className="text-lg font-bold text-stone-900">Select Multiple Services</h3>
             <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-              Select 1, 2, or all 10 services needed for your home. View transparent, upfront USD pricing computed in real-time.
+              Combine interior cleaning, power washing, gutter clearance, or HVAC checks in one ticket with automatic bundle discounts.
             </p>
           </SpotlightCard>
 
           <SpotlightCard
             enableTilt={true}
-            className="glass-card p-6 sm:p-7 rounded-3xl space-y-4 relative border border-stone-200/70 shadow-depth-sm hover:shadow-depth-md"
+            className="bg-white p-6 sm:p-7 rounded-3xl space-y-4 relative border border-stone-200/80 shadow-xs hover:shadow-md"
           >
             <div className="flex items-center justify-between">
               <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-amber-100 text-amber-700 font-bold text-sm">
@@ -242,15 +248,15 @@ export default function HomePage() {
               </span>
               <MessageCircle className="w-5 h-5 text-stone-400" />
             </div>
-            <h3 className="text-lg font-bold text-stone-900">Auto-Generated Brief</h3>
+            <h3 className="text-lg font-bold text-stone-900">Direct Dispatch Transmission</h3>
             <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-              Your inquiry is automatically structured into a dispatch message. Send it via Gmail, WhatsApp, or Telegram with zero on-site payment.
+              Your inquiry is saved on our server and formatted into a structured brief sent via WhatsApp, Gmail, or Telegram without paying on site.
             </p>
           </SpotlightCard>
 
           <SpotlightCard
             enableTilt={true}
-            className="glass-card p-6 sm:p-7 rounded-3xl space-y-4 relative border border-stone-200/70 shadow-depth-sm hover:shadow-depth-md"
+            className="bg-white p-6 sm:p-7 rounded-3xl space-y-4 relative border border-stone-200/80 shadow-xs hover:shadow-md"
           >
             <div className="flex items-center justify-between">
               <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-amber-100 text-amber-700 font-bold text-sm">
@@ -260,23 +266,23 @@ export default function HomePage() {
             </div>
             <h3 className="text-lg font-bold text-stone-900">Inspected &amp; Guaranteed</h3>
             <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-              Uniformed, vetted technicians arrive on time in equipped vans. Inspect completed work with our crew backed by our 24-hr guarantee.
+              Uniformed, vetted technicians arrive in equipped vans. You inspect completed work alongside our crew before finalizing payment.
             </p>
           </SpotlightCard>
         </div>
       </section>
 
-      {/* 4. VERIFIED HOMEOWNER REVIEWS */}
+      {/* 5. VERIFIED HOMEOWNER REVIEWS */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center space-y-3 mb-10 animate-slide-up">
-          <span className="text-xs font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+          <span className="text-xs font-bold uppercase tracking-widest text-amber-700 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
             Real Feedback
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight">
-            Verified Homeowner Reviews
+            Verified Homeowner Experiences
           </h2>
           <p className="text-sm text-stone-600">
-            Rated 4.9 out of 5 stars across over 2,400 serviced properties.
+            Honest feedback from residential clients across our active regional service routes.
           </p>
         </div>
 
@@ -285,7 +291,7 @@ export default function HomePage() {
             <SpotlightCard
               key={idx}
               enableTilt={true}
-              className="glass-warm p-6 rounded-3xl flex flex-col justify-between space-y-4 border border-amber-200/60 shadow-depth-sm hover:shadow-depth-md"
+              className="bg-white p-6 rounded-3xl flex flex-col justify-between space-y-4 border border-stone-200/80 shadow-xs hover:shadow-md"
             >
               <div className="space-y-3">
                 <div className="flex items-center gap-1">
@@ -298,12 +304,12 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-amber-200/60 flex items-center justify-between text-xs">
+              <div className="pt-4 border-t border-stone-100 flex items-center justify-between text-xs">
                 <div>
                   <div className="font-bold text-stone-900">{rev.author}</div>
                   <div className="text-stone-500">{rev.location}</div>
                 </div>
-                <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-100/70 px-2 py-0.5 rounded-md">
+                <span className="text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
                   {rev.service}
                 </span>
               </div>
@@ -312,28 +318,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. CONVERSION ACTION STRIP */}
+      {/* 6. CONVERSION ACTION STRIP */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
+        <div className="bg-stone-900 rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
           <div className="relative z-10 max-w-2xl space-y-4">
             <h2 className="text-3xl sm:text-4xl font-black tracking-tight">
               Ready for Dependable Property Care?
             </h2>
-            <p className="text-sm sm:text-base text-amber-100 leading-relaxed">
-              Book multiple services in minutes without paying on site. We auto-generate your booking request for direct transmission via Gmail, WhatsApp, or Telegram.
+            <p className="text-sm sm:text-base text-stone-300 leading-relaxed">
+              Book multiple services in minutes without paying on site. We auto-generate your booking request for direct transmission via WhatsApp, Gmail, or Telegram.
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-3">
               <Link
                 href="/book"
-                className="px-6 py-3.5 rounded-xl bg-white text-stone-900 font-extrabold text-sm hover:bg-amber-50 transition-colors shadow-md flex items-center gap-2"
+                className="px-6 py-3.5 rounded-xl bg-amber-500 text-stone-950 font-extrabold text-sm hover:bg-amber-400 transition-colors shadow-md flex items-center gap-2"
               >
                 <span>Book Services Online</span>
-                <ArrowRight className="w-4 h-4 text-amber-600" />
+                <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/contact"
-                className="px-5 py-3.5 rounded-xl bg-stone-900/30 hover:bg-stone-900/40 text-white font-semibold text-sm border border-white/20 transition-colors"
+                className="px-5 py-3.5 rounded-xl bg-stone-800 hover:bg-stone-700 text-white font-semibold text-sm border border-stone-700 transition-colors"
               >
                 <span>Request a Quote</span>
               </Link>
@@ -345,15 +351,6 @@ export default function HomePage() {
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>WhatsApp Desk</span>
-              </a>
-              <a
-                href="https://t.me/househerocare"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-3.5 rounded-xl bg-white/20 hover:bg-white/30 text-white font-semibold text-sm transition-colors border border-white/25"
-              >
-                <Send className="w-4 h-4" />
-                <span>Telegram</span>
               </a>
             </div>
           </div>
